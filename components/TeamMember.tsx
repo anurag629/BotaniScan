@@ -1,9 +1,14 @@
-import React from 'react';
+// TeamMember.tsx (Server Component)
+'use client' // 👈 use it here
+
+import React, { useState } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 library.add(fab.faLinkedin, fab.faTwitter, fab.faGithub, fab.faInstagram);
+
+import MemberDetailsPopup from './MemberDetailsPopup';
 
 interface TeamMemberProps {
     name: string;
@@ -13,13 +18,37 @@ interface TeamMemberProps {
     githubUrl: string;
     instagramUrl: string;
     imageSrc: string;
+    description: string;
+    email: string;
 }
 
-const TeamMember: React.FC<TeamMemberProps> = ({ name, title, linkedinUrl, twitterUrl, githubUrl, instagramUrl, imageSrc }) => {
+const TeamMember: React.FC<TeamMemberProps> = ({
+    name,
+    title,
+    linkedinUrl,
+    twitterUrl,
+    githubUrl,
+    instagramUrl,
+    imageSrc,
+    description,
+    email,
+}) => {
+
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+    const openPopup = () => {
+        setIsPopupOpen(true);
+    };
+
+    const closePopup = () => {
+        setIsPopupOpen(false);
+    };
+
     return (
         <div className="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+            {/* Server-side rendering part */}
             <div className="flex flex-col">
-                <a href="#" className="mx-auto">
+                <a href="#" className="mx-auto" onClick={openPopup}>
                     <img
                         className="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
                         src={imageSrc}
@@ -49,6 +78,17 @@ const TeamMember: React.FC<TeamMemberProps> = ({ name, title, linkedinUrl, twitt
                     </div>
                 </div>
             </div>
+
+            {/* Render the MemberDetailsPopup */}
+        <MemberDetailsPopup
+            isOpen={isPopupOpen}
+            onClose={closePopup}
+            name={name}
+            title={title}
+            imageSrc={imageSrc}
+            description={description}
+            email={email}
+        />
         </div>
     );
 };

@@ -10,7 +10,9 @@ const Team: React.FC = () => {
             linkedinUrl: "https://www.linkedin.com/in/tranter-jaskulski",
             twitterUrl: "https://twitter.com/tranterjaskulski",
             githubUrl: "https://github.com/tranterjaskulski",
-            instagramUrl: "https://www.instagram.com/tranterjaskulski/"
+            instagramUrl: "https://www.instagram.com/tranterjaskulski/",
+            email: "a@gnail.com",
+            description: "Hello How are",
         },
         {
             name: "Denice Jagna",
@@ -19,7 +21,9 @@ const Team: React.FC = () => {
             linkedinUrl: "https://www.linkedin.com/in/denicejagna",
             twitterUrl: "https://twitter.com/denicejagna",
             githubUrl: "https://github.com/denicejagna",
-            instagramUrl: "https://www.instagram.com/denicejagna/"
+            instagramUrl: "https://www.instagram.com/denicejagna/",
+            email: "aa@gmail.com",
+            description: "With over 100 years of combined experience, we've got a well-seasoned team at the helm.",
         },
         {
             name: "Abhishek Gupta",
@@ -28,7 +32,9 @@ const Team: React.FC = () => {
             linkedinUrl: "https://www.linkedin.com/in/kenjimilton",
             twitterUrl: "https://twitter.com/kenjimilton",
             githubUrl: "https://github.com/kenjimilton",
-            instagramUrl: "https://www.instagram.com/kenjimilton/"
+            instagramUrl: "https://www.instagram.com/kenjimilton/",
+            email: "aaa@gmail.com",
+            description: "With over 100 years of combined experience, we've got a well-seasoned team at the helm.",
         },
         {
             name: "Anurag Verma",
@@ -37,7 +43,9 @@ const Team: React.FC = () => {
             linkedinUrl: "https://www.linkedin.com/in/anurag629",
             twitterUrl: "https://twitter.com/anurag_629",
             githubUrl: "https://github.com/anurag629",
-            instagramUrl: "https://www.instagram.com/anurag_629/"
+            instagramUrl: "https://www.instagram.com/anurag_629/",
+            email: "akvermaav629@gmail.com",
+            description: "With over 100 years of combined experience, we've got a well-seasoned team at the helm.",
         },
     ];
 
@@ -53,6 +61,8 @@ const Team: React.FC = () => {
                     twitterUrl={member.twitterUrl}
                     githubUrl={member.githubUrl}
                     instagramUrl={member.instagramUrl}
+                    email={member.email}
+                    description={member.description}
                 />
             ))}
         </div>
