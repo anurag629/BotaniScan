@@ -32,7 +32,7 @@ const MemberDetailsPopup: React.FC<MemberDetailsPopupProps> = ({
                 {/* <div className="absolute inset-0 bg-indigo-600 bg-opacity-0"></div> */}
 
                 {/* Popup body */}
-                <div className="relative bg-gray-900 bg-opacity-80 rounded-lg shadow-lg border-black">
+                <div className="relative bg-gray-900 bg-opacity-800 rounded-lg shadow-lg border-black">
                     {/* Close button */}
                     <button
                         className="absolute top-0 right-0 m-4 p-2 text-gray-500 hover:text-gray-700"

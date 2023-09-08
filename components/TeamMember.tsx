@@ -48,7 +48,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
         <div className="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
             {/* Server-side rendering part */}
             <div className="flex flex-col">
-                <a href="#" className="mx-auto" onClick={openPopup}>
+                <a className="mx-auto" onClick={openPopup}>
                     <img
                         className="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
                         src={imageSrc}
