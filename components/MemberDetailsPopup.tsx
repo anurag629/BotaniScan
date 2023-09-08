@@ -28,8 +28,6 @@ const MemberDetailsPopup: React.FC<MemberDetailsPopupProps> = ({
         <div className="fixed inset-0 flex items-center justify-center z-50 overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
             {/* Popup content */}
             <div className="relative w-96 h-72 max-w-3xl mx-auto my-6 rounded-lg shadow-lg">
-                {/* Background overlay */}
-                {/* <div className="absolute inset-0 bg-indigo-600 bg-opacity-0"></div> */}
 
                 {/* Popup body */}
                 <div className="relative bg-gray-900 bg-opacity-800 rounded-lg shadow-lg border-black">
