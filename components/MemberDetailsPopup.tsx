@@ -65,12 +65,12 @@ const MemberDetailsPopup: React.FC<MemberDetailsPopupProps> = ({
                             <h2 className="mt-4 text-xl font-semibold text-white-800">
                                 {name}
                             </h2>
-                            <p className="text-sm text-red-600">{title}</p>
+                            <p className="text-sm text text-red-600">{title}</p>
                         </div>
 
-                        <div className="mt-8 text-white-700">{description}</div>
+                        <div className="mt-8 text-white-700 text-center">{description}</div>
 
-                        <div className="mt-4 text-blue-600">
+                        <div className="mt-4 text-blue-600 text-center">
                             Email: <a href={`mailto:${email}`}>{email}</a>
                         </div>
                     </div>
