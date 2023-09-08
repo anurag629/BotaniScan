@@ -37,3 +37,6 @@ next-env.d.ts
 # Python Environments
 .venv
 env/
+
+# Python cache files
+__pycache__/
