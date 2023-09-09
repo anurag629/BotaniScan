@@ -1,22 +1,14 @@
+import React from "react";
+import Link from "next/link";
+
+
 const Navbar = () => {
     return (
-        <div>
-            <h1>Navbar</h1>
-
-            <style jsx>{`
-                h1 {
-                    color: red;
-                }
-            `}</style>
-
-            <style jsx global>{`
-                body {
-                    background-color: #000;
-                }
-            `}</style>
-
-            
-        </div>
+        <nav>
+            <Link href="/">Project</Link>
+            <Link href="/">Our Team</Link>
+            <Link href="/">About Project</Link>
+        </nav>
     );
 }
 
