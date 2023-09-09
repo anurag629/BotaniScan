@@ -1,17 +1,24 @@
+"use client"
+
 // Header.tsx
-import React from 'react';
+import React, { useState } from 'react';
 
 const Header: React.FC = () => {
+
+  const [main, ourteam] = useState()
+
   return (
-    <div className="flex flex-wrap justify-center text-center mb-24">
-      <div className="w-full lg:w-6/12 px-4">
-        <h1 className="text-white-900 text-4xl font-bold mb-8">
-          Meet the Team
-        </h1>
-        <p className="text-pink-700 text-lg font-light">
-          With over 100 years of combined experience, we&apos;ve got a well-seasoned team at the helm.
-        </p>
-      </div>
+    <div>
+      <h1 className="text-center text-white-900 text-4xl font-bold mt-10">
+        BOTANI SCAN
+      </h1>
+      <span className="text-center font-bold opacity-30">
+        <hr className="my-4" />
+      </span>
+      <span className="text-center font-bold mb-10 opacity-30">
+
+        <hr className="my-4" />
+      </span>
     </div>
   );
 };

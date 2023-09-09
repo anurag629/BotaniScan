@@ -1,12 +1,11 @@
 // TeamMember.tsx (Server Component)
 'use client' // 👈 use it here
 
-import React, { useState } from 'react';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
+// TeamMember.tsx
+import React,  { useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-library.add(fab.faLinkedin, fab.faTwitter, fab.faGithub, fab.faInstagram);
+import { faLinkedin, faTwitter, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import Link from 'next/link';
 
 import MemberDetailsPopup from './MemberDetailsPopup';
 
@@ -45,42 +44,38 @@ const TeamMember: React.FC<TeamMemberProps> = ({
     };
 
     return (
-        <div className="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4 hover:scale-110 transition-transform duration-300">
-            {/* Server-side rendering part */}
+        <div
+            className="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4 hover:scale-110 transition-transform duration-300"
+        >
             <div className="flex flex-col">
                 <div onClick={openPopup}>
-                    <a className="mx-auto">
+                    <a className='mx-auto'>
                         <img
-                            className="rounded-2xl drop-shadow-md "
+                            className="rounded-2xl drop-shadow-md"
                             src={imageSrc}
                             alt={name}
                         />
                     </a>
                     <div className="text-center mt-6">
-                        <h1 className="text-white-900 text-xl font-bold mb-1">
-                            {name}
-                        </h1>
-                        <div className="text-red-700 font-light mb-2">
-                            {title}
-                        </div>
+                        <h1 className="text-white-900 text-xl font-bold mb-1">{name}</h1>
+                        <div className="text-red-700 font-light mb-2">{title}</div>
                     </div>
                 </div>
                 <div className="flex items-center justify-center">
-                        <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex rounded-full h-10 w-10 hover:scale-150 transition-transform duration-300">
-                            <FontAwesomeIcon icon={['fab', 'linkedin']} className="fab fa-instagram text-white mx-auto mt-2" />
-                        </a>
-                        <a href={twitterUrl} target="_blank" rel="noopener noreferrer" className="flex rounded-full h-10 w-10 hover:scale-150 transition-transform duration-300">
-                            <FontAwesomeIcon icon={['fab', 'twitter']} className="fab fa-instagram text-white mx-auto mt-2" />
-                        </a>
-                        <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="flex rounded-full h-10 w-10 hover:scale-150 transition-transform duration-300">
-                            <FontAwesomeIcon icon={['fab', 'github']} className="fab fa-instagram text-white mx-auto mt-2" />
-                        </a>
-                        <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="flex rounded-full h-10 w-10 hover:scale-150 transition-transform duration-300">
-                            <FontAwesomeIcon icon={['fab', 'instagram']} className="fab fa-instagram text-white mx-auto mt-2" />
-                        </a>
-                    </div>
+                    <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex rounded-full h-10 w-10 hover:scale-150 transition-transform duration-300">
+                        <FontAwesomeIcon icon={faLinkedin} className="text-blue-500 mx-auto mt-2" />
+                    </a>
+                    <a href={twitterUrl} target="_blank" rel="noopener noreferrer" className="flex rounded-full h-10 w-10 hover:scale-150 transition-transform duration-300">
+                        <FontAwesomeIcon icon={faTwitter} className="text-blue-400 mx-auto mt-2" />
+                    </a>
+                    <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="flex rounded-full h-10 w-10 hover:scale-150 transition-transform duration-300">
+                        <FontAwesomeIcon icon={faGithub} className="text-gray-600 mx-auto mt-2" />
+                    </a>
+                    <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="flex rounded-full h-10 w-10 hover:scale-150 transition-transform duration-300">
+                        <FontAwesomeIcon icon={faInstagram} className="text-pink-500 mx-auto mt-2" />
+                    </a>
+                </div>
             </div>
-
             {/* Render the MemberDetailsPopup */}
         <MemberDetailsPopup
             isOpen={isPopupOpen}
@@ -96,3 +91,4 @@ const TeamMember: React.FC<TeamMemberProps> = ({
 };
 
 export default TeamMember;
+

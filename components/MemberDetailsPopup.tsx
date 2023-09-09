@@ -25,7 +25,7 @@ const MemberDetailsPopup: React.FC<MemberDetailsPopupProps> = ({
     }
 
     return (
-        <div className="fixed inset-0 flex items-center justify-center z-50 overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
+        <div className="fixed inset-0 flex items-center justify-center z-50 overflow-x-hidden overflow-y-hidden outline-none focus:outline-none">
             {/* Popup content */}
             <div className="relative w-96 h-72 max-w-3xl mx-auto my-6 rounded-lg shadow-lg">
 
