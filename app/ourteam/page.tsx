@@ -1,5 +1,5 @@
 import React from 'react';
-import MainProject from '@/components/mainProject/MainProject';
+import MainContent from '@/components/team/MainTeam';
 
 export default function Home() {
   return (
@@ -7,7 +7,7 @@ export default function Home() {
       <div className="z-10 w-full max-w-6xl items-center justify-between font-mono text-sm lg:flex">
             
             <div className="flex flex-col">
-                <MainProject />
+                <MainContent />
             </div>
       </div>
     </main>

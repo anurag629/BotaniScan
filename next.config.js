@@ -1,30 +1,25 @@
+// next.config.js
+ 
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+  options: {
+    // If you use remark-gfm, you'll need to use next.config.mjs
+    // as the package is ESM only
+    // https://github.com/remarkjs/remark-gfm#install
+    remarkPlugins: [],
+    rehypePlugins: [],
+    // If you use `MDXProvider`, uncomment the following line.
+    // providerImportSource: "@mdx-js/react",
+  },
+})
+ 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  rewrites: async () => {
-    return [
-      {
-        source: "/api/:path*",
-        destination:
-          process.env.NODE_ENV === "development"
-            ? "http://127.0.0.1:8000/api/:path*"
-            : "/api/",
-      },
-      {
-        source: "/docs",
-        destination:
-          process.env.NODE_ENV === "development"
-            ? "http://127.0.0.1:8000/docs"
-            : "/api/docs",
-      },
-      {
-        source: "/openapi.json",
-        destination:
-          process.env.NODE_ENV === "development"
-            ? "http://127.0.0.1:8000/openapi.json"
-            : "/api/openapi.json",
-      },
-    ];
-  },
-};
-
-module.exports = nextConfig;
+  // Configure pageExtensions to include md and mdx
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+  // Optionally, add any other Next.js config below
+  reactStrictMode: true,
+}
+ 
+// Merge MDX config with Next.js config
+module.exports = withMDX(nextConfig)
