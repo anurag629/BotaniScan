@@ -19,8 +19,8 @@ const Navbar = () => {
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <a href="/" className="">
-              <div class="avatar">
-                <div class="w-10 rounded">
+              <div className="avatar">
+                <div className="w-10 rounded">
                   <h1 className="text-3xl text-white font-bold">BS</h1>
                 </div>
               </div>
