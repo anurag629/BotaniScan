@@ -4,18 +4,21 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
 import Link from "next/link";
 
-
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const menu = [
     { name: "Home", url: "/" },
     { name: "Our Team", url: "/ourteam" },
     { name: "About Project", url: "/aboutproject" },
-    
   ];
+
+  const closeNavbar = () => {
+    setNavbar(false);
+  };
+
   return (
-    <nav className="w-full bg-black-600 shadow-[0_-1px_0px_2px_rgba(249,7,7,1)]">
-      <div className="justify-between h-[60px] px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+    <nav className={`w-full bg-black-600 shadow-[0_-1px_0px_2px_rgba(249,7,7,1)] ${navbar ? 'h-screen' : 'h-[70px]'}`}>
+      <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <a href="/" className="">
@@ -46,11 +49,14 @@ const Navbar = () => {
             }`}
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 ">
-              {menu.map(({ name, url, }, index) => (
-                <li key={index} className="text-white hover:scale-110 transition-transform duration-300">
-                  
-                    <Link href={url}>{name}</Link>
-                
+              {menu.map(({ name, url }, index) => (
+                <li
+                  key={index}
+                  className="text-white hover:scale-110 transition-transform duration-300"
+                >
+                  <Link href={url} onClick={closeNavbar}>
+                    {name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -60,4 +66,5 @@ const Navbar = () => {
     </nav>
   );
 };
+
 export default Navbar;

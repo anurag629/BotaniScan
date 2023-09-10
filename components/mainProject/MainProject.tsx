@@ -7,9 +7,9 @@ const MainProject: React.FC = () => {
             <div className="flex flex-wrap justify-center text-center m-24">
                 <div className="w-full lg:w-6/12 px-4">
                     <h1 className="text-white-900 text-4xl font-bold mb-8">
-                        Upload the plant leaf
+                        Upload the Plant <b className='text-green-700 '>Leaf</b>
                     </h1>
-                    <p className="text-pink-700 text-lg font-light">
+                    <p className="text-red-500 text-lg font-light">
                         Botani Scan is a web application that can identify the plant leaf disease using image processing and deep learning.
                     </p>
                 </div>

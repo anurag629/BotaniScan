@@ -15,7 +15,7 @@ export default function Home() {
                                 </h1>
 
                             </div>
-                            <p className="text-pink-700 text-lg font-light">
+                            <p className="text-red-500 text-lg font-light">
                                 BotaniScan is a web application that uses machine learning to identify plant diseases. It is a project that was created for the SIH(Smart India Hackathon) 2023.
                             </p>
                             

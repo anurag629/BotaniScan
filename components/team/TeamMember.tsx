@@ -70,7 +70,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
                     </div>
                     <div className="text-center mt-6">
                         <h1 className="text-white-900 text-xl font-bold mb-1">{name}</h1>
-                        <div className="text-red-700 font-light mb-2">{title}</div>
+                        <div className="text-red-500 font-light mb-2">{title}</div>
                     </div>
                 </div>
                 <div className="flex items-center justify-center">

@@ -10,7 +10,7 @@ const MainContent: React.FC = () => {
           <h1 className="text-white-900 text-4xl font-bold mb-8">
             Our team <b className='text-green-700 '>Flora Finder</b>
           </h1>
-          <p className="text-pink-700 text-lg font-light">
+          <p className="text-red-500 text-lg font-light">
             With over 100 years of combined experience, we&apos;ve got a well-seasoned team at the helm.
           </p>
         </div>
