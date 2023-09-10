@@ -6,6 +6,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faTwitter, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import MemberDetailsPopup from './MemberDetailsPopup';
 
@@ -46,18 +47,25 @@ const TeamMember: React.FC<TeamMemberProps> = ({
     return (
         <div
             className="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4 hover:scale-110 transition-transform duration-300"
-            
+
         >
             <div className="flex flex-col">
                 <div
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
                 >
                     <div>
-                        <img
+                        {/* <img
                             className="rounded-2xl drop-shadow-md"
                             src={imageSrc}
                             alt={name}
+                        /> */}
+                        <Image
+                            className="rounded-2xl drop-shadow-md"
+                            src={imageSrc}
+                            alt={name}
+                            width={300} // Specify the width you want in pixels
+                            height={200} // Specify the height you want in pixels
                         />
                     </div>
                     <div className="text-center mt-6">
@@ -66,7 +74,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
                     </div>
                 </div>
                 <div className="flex items-center justify-center">
-                <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex rounded-full h-10 w-10 hover:scale-150 transition-transform duration-300">
+                    <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex rounded-full h-10 w-10 hover:scale-150 transition-transform duration-300">
                         <FontAwesomeIcon icon={faLinkedin} className="text-blue-500 mx-auto mt-2" />
                     </a>
                     <a href={twitterUrl} target="_blank" rel="noopener noreferrer" className="flex rounded-full h-10 w-10 hover:scale-150 transition-transform duration-300">
@@ -77,8 +85,8 @@ const TeamMember: React.FC<TeamMemberProps> = ({
                     </a>
                     <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="flex rounded-full h-10 w-10 hover:scale-150 transition-transform duration-300">
                         <FontAwesomeIcon icon={faInstagram} className="text-pink-500 mx-auto mt-2" />
-                    </a>         
-                
+                    </a>
+
 
 
 

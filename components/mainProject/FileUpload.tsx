@@ -7,19 +7,24 @@ const FileUpload: React.FC = () => {
     const [uploadStatus, setUploadStatus] = useState<string | null>(null);
 
     const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const file = event.target.files[0];
-        setSelectedFile(file);
-
-        // You can perform additional validation here if needed
-        if (file) {
+        const fileInput = event.target;
+        if (fileInput && fileInput.files && fileInput.files[0]) {
+            const file = fileInput.files[0];
             if (file.type === 'image/svg+xml' || file.type === 'image/png' || file.type === 'image/jpeg' || file.type === 'image/gif') {
+                setSelectedFile(file);
                 setUploadStatus('File selected and valid.');
             } else {
+                setSelectedFile(null); // Clear the selected file if it's not valid
                 setUploadStatus('Invalid file format. Please select an SVG, PNG, JPEG, or GIF file.');
             }
         } else {
+            setSelectedFile(null); // Clear the selected file if no file is selected
             setUploadStatus(null);
         }
+
+
+        // You can perform additional validation here if needed
+
     };
 
     return (

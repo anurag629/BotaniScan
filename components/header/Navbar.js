@@ -3,20 +3,12 @@ import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
 import Link from "next/link";
-import Dropdown from "./Dropdown";
+
+
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const menu = [
     { name: "Home", url: "/" },
-    // {
-    //   name: "Services",
-    //   url: "/",
-    //   dropdown: [
-    //     { name: "Service 1", url: "" },
-    //     { name: "Service 2", url: "" },
-    //     { name: "Service 3", url: "" },
-    //   ],
-    // },
     { name: "Our Team", url: "/ourteam" },
     { name: "About Project", url: "/aboutproject" },
     
@@ -29,7 +21,6 @@ const Navbar = () => {
             <a href="/" className="">
               <div class="avatar">
                 <div class="w-10 rounded">
-                  {/* <img src="" /> */}
                   <h1 className="text-3xl text-white font-bold">BS</h1>
                 </div>
               </div>
@@ -55,13 +46,11 @@ const Navbar = () => {
             }`}
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 ">
-              {menu.map(({ name, url, dropdown }, index) => (
+              {menu.map(({ name, url, }, index) => (
                 <li key={index} className="text-white hover:scale-110 transition-transform duration-300">
-                  {dropdown ? (
-                    <Dropdown name={name} dropdownItems={dropdown} />
-                  ) : (
+                  
                     <Link href={url}>{name}</Link>
-                  )}
+                
                 </li>
               ))}
             </ul>

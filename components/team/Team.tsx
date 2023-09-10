@@ -6,7 +6,7 @@ const Team: React.FC = () => {
         {
             name: "Tranter Jaskulski",
             title: "Founder & Specialist",
-            imageSrc: "https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?fit=clamp&w=400&h=400&q=80",
+            imageSrc: "/assets/profile/anurag-verma.png",
             linkedinUrl: "https://www.linkedin.com/in/tranter-jaskulski",
             twitterUrl: "https://twitter.com/tranterjaskulski",
             githubUrl: "https://github.com/tranterjaskulski",
@@ -17,7 +17,7 @@ const Team: React.FC = () => {
         {
             name: "Denice Jagna",
             title: "Tired & M. Specialist",
-            imageSrc: "https://images.unsplash.com/photo-1634896941598-b6b500a502a7?fit=clamp&w=400&h=400&q=80",
+            imageSrc: "/assets/profile/anurag-verma.png",
             linkedinUrl: "https://www.linkedin.com/in/denicejagna",
             twitterUrl: "https://twitter.com/denicejagna",
             githubUrl: "https://github.com/denicejagna",
@@ -28,7 +28,7 @@ const Team: React.FC = () => {
         {
             name: "Abhishek Gupta",
             title: "Python & Web Developer",
-            imageSrc: "https://github.com/Abhi-gits.png",
+            imageSrc: "/assets/profile/abhishek-gupta.png",
             linkedinUrl: "https://www.linkedin.com/in/kenjimilton",
             twitterUrl: "https://twitter.com/kenjimilton",
             githubUrl: "https://github.com/kenjimilton",
@@ -39,7 +39,7 @@ const Team: React.FC = () => {
         {
             name: "Anurag Verma",
             title: "AI/ML & Web Developer",
-            imageSrc: "https://github.com/anurag629.png",
+            imageSrc: "/assets/profile/anurag-verma.png",
             linkedinUrl: "https://www.linkedin.com/in/anurag629",
             twitterUrl: "https://twitter.com/anurag_629",
             githubUrl: "https://github.com/anurag629",

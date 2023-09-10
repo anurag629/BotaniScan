@@ -10,7 +10,7 @@ const features = [
   {
     name: 'Fast',
     description:
-      'We use the latest technology to make your experience as fast as possible.',  
+      'We use the latest technology to make your experience as fast as possible.',
     icon: ServerIcon,
   },
   {
@@ -24,8 +24,9 @@ const features = [
 export default function Detail() {
   return (
     <div className="bg-white-900">
-      
-        
+      <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
+        <h5>Other Details</h5>
+      </div>
     </div>
   )
 }
