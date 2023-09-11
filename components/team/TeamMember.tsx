@@ -55,17 +55,12 @@ const TeamMember: React.FC<TeamMemberProps> = ({
                     onMouseLeave={handleMouseLeave}
                 >
                     <div>
-                        {/* <img
-                            className="rounded-2xl drop-shadow-md"
-                            src={imageSrc}
-                            alt={name}
-                        /> */}
                         <Image
                             className="rounded-2xl drop-shadow-md"
                             src={imageSrc}
                             alt={name}
-                            width={300} // Specify the width you want in pixels
-                            height={200} // Specify the height you want in pixels
+                            width={200} 
+                            height={200} 
                         />
                     </div>
                     <div className="text-center mt-6">
