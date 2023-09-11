@@ -59,7 +59,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
                             className="rounded-2xl drop-shadow-md"
                             src={imageSrc}
                             alt={name}
-                            width={200} 
+                            width={300} 
                             height={200} 
                         />
                     </div>
