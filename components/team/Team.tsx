@@ -15,12 +15,12 @@ const Team: React.FC = () => {
             description: "Hello How are",
         },
         {
-            name: "Denice Jagna",
-            title: "Tired & M. Specialist",
-            imageSrc: "/assets/profile/anurag-verma.png",
-            linkedinUrl: "https://www.linkedin.com/in/denicejagna",
-            twitterUrl: "https://twitter.com/denicejagna",
-            githubUrl: "https://github.com/denicejagna",
+            name: "Bhavy Airi",
+            title: "Web Developer",
+            imageSrc: "/assets/profile/bhavy-airi.png",
+            linkedinUrl: "https://www.linkedin.com/in/bhavy-airi-a24090207/",
+            twitterUrl: "",
+            githubUrl: "https://github.com/tech-bash",
             instagramUrl: "https://www.instagram.com/denicejagna/",
             email: "aa@gmail.com",
             description: "With over 100 years of combined experience, we've got a well-seasoned team at the helm.",
@@ -45,7 +45,7 @@ const Team: React.FC = () => {
             githubUrl: "https://github.com/anurag629",
             instagramUrl: "https://www.instagram.com/anurag_629/",
             email: "akvermaav629@gmail.com",
-            description: "With over 100 years of combined experience, we've got a well-seasoned team at the helm.",
+            description: "Have a strong background in math, statistics, and programming. I am passionate about translating complex data into actionable insights. Have experience in building machine learning & deep learning models. I quick learner and enjoy working in a fast-paced work environment.",
         },
     ];
 
