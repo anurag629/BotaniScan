@@ -5,10 +5,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faTwitter, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import Link from 'next/link';
 import Image from 'next/image';
+import { Tooltip, Typography } from "@material-tailwind/react";
 
-import MemberDetailsPopup from './MemberDetailsPopup';
 
 interface TeamMemberProps {
     name: string;
@@ -34,26 +33,11 @@ const TeamMember: React.FC<TeamMemberProps> = ({
     email,
 }) => {
 
-    const [isHovered, setIsHovered] = React.useState(false);
-
-    const handleMouseEnter = () => {
-        setIsHovered(true);
-    };
-
-    const handleMouseLeave = () => {
-        setIsHovered(false);
-    };
 
     return (
         <div
-            className="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4 hover:scale-110 transition-transform duration-300"
-
-        >
+            className="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4 hover:scale-110 transition-transform duration-300"        >
             <div className="flex flex-col">
-                <div
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                >
                     <div>
                         <Image
                             className="rounded-2xl drop-shadow-md"
@@ -67,7 +51,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
                         <h1 className="text-white-900 text-xl font-bold mb-1">{name}</h1>
                         <div className="text-red-500 font-light mb-2">{title}</div>
                     </div>
-                </div>
+            
                 <div className="flex items-center justify-center">
                     <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex rounded-full h-10 w-10 hover:scale-150 transition-transform duration-300">
                         <FontAwesomeIcon icon={faLinkedin} className="text-blue-500 mx-auto mt-2" />
