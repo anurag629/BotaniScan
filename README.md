@@ -10,23 +10,6 @@ yarn
 pnpm install
 ```
 
-Then, create virtual enviroment
-
-```bash
-python3 -m venv venv
-```
-
-Now, activate virtual enviroment
-
-```bash
-source venv/bin/activate
-```
-
-Then, install the dependencies:
-
-```bash
-pip install -r requirements.txt
-```
 
 Then, run the development server:
 
@@ -38,8 +21,4 @@ yarn dev
 pnpm dev
 ```
 
-> You only need to run the frontend development server; the backend will automatically run by itself. However, if you only want to run the backend, then follow the steps below.
-
-```bash
-uvicorn main:app --reload
-```
+##### Before pushing changes do `yarn build` and if you faced any errors them fix them and then push the changes
