@@ -28,7 +28,7 @@ const Team: React.FC = () => {
         {
             name: "Bhavy Airi",
             title: "Web Developer",
-            imageSrc: "/assets/profile/bhavy-airi.png",
+            imageSrc: "/assets/profile/bhavy.png",
             linkedinUrl: "https://www.linkedin.com/in/bhavy-airi-a24090207/",
             twitterUrl: "",
             githubUrl: "https://github.com/tech-bash",
