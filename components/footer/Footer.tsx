@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
                     </ul>
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-red-500 lg:my-8" />
-                <span className="block text-sm text-gray-500 sm:text-center text-gray-400">© 2023 <a href="/" className="hover:underline">BOTANI SCAN™</a>. All Rights Reserved.</span>
+                <span className="block text-sm dark:text-gray-300 sm:text-center">© 2023 <a href="/" className="hover:underline">BOTANI SCAN™</a>. All Rights Reserved.</span>
             </div>
         </footer>
     );

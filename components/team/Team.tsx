@@ -2,8 +2,23 @@ import React from 'react';
 import TeamMember from './TeamMember';
 
 const Team: React.FC = () => {
+    const mentorDetails = [
+        {
+            name: "Ravi",
+            MemberPosition: "(Mentor)",
+            title: "Python & Web Developer",
+            imageSrc: "/assets/profile/woman.png",
+            linkedinUrl: "https://www.linkedin.com/in/ravi-kumar-37463/",
+            twitterUrl: "https://twitter.com/anurag_629",
+            githubUrl: "https://github.com/anurag629",
+            instagramUrl: "https://www.instagram.com/anurag_629/",
+        },
+    ];
+
     const teamDetails = [
         {
+            isTeamLeader: false,
+            isMentor: false,
             name: "Akansha", 
             MemberPosition: "(Team Member)",
             title: "C++ and Web Developer",
@@ -16,6 +31,8 @@ const Team: React.FC = () => {
             description: "Hello How are",
         },
         {
+            isTeamLeader: false,
+            isMentor: false,
             name: "Rukshali",
             MemberPosition: "(Team Member)",
             title: "Python Programmer",
@@ -28,6 +45,8 @@ const Team: React.FC = () => {
             description: "Hello How are",
         },
         {
+            isTeamLeader: false,
+            isMentor: false,
             name: "Bhavy Airi",
             MemberPosition: "(Team Member)",
             title: "Web Developer",
@@ -40,6 +59,8 @@ const Team: React.FC = () => {
             description: "With over 100 years of combined experience, we've got a well-seasoned team at the helm.",
         },
         {
+            isTeamLeader: false,
+            isMentor: false,
             name: "Abhishek Gupta",
             MemberPosition: "(Team Member)",
             title: "Python & Web Developer",
@@ -52,10 +73,12 @@ const Team: React.FC = () => {
             description: "Have a strong background in python and c++. I am passionate about finding bugs in code and transforming ideas into reality. Have experience in cybersecurity and Machine learning",
         },
         {
+            isTeamLeader: false,
+            isMentor: false,
             name: "Subrat",
             MemberPosition: "(Team Member)",
             title: "Programmer & Web Developer",
-            imageSrc: "/assets/profile/subrat.jpeg",
+            imageSrc: "/assets/profile/subrat.png",
             linkedinUrl: "https://www.linkedin.com/in/subratyadav/",
             twitterUrl: "https://twitter.com/findingsubrat?t=hUHGhRBlKT2ZKJfcmPXaGQ&s=09",
             githubUrl: "https://github.com/Subrat29",
@@ -64,6 +87,8 @@ const Team: React.FC = () => {
             description: "I have a strong background in C++ and Java and am currently learning web development.",
         },
         {
+            isTeamLeader: true,
+            isMentor: false,
             name: "Anurag Verma",
             MemberPosition: "(Team Leader)",
             title: "AI/ML & Web Developer",
@@ -74,14 +99,16 @@ const Team: React.FC = () => {
             instagramUrl: "https://www.instagram.com/anurag_629/",
             email: "akvermaav629@gmail.com",
             description: "Have a strong background in math, statistics, and programming. I am passionate about translating complex data into actionable insights. Have experience in building machine learning & deep learning models. I quick learner and enjoy working in a fast-paced work environment.",
-        },
+        }
     ];
 
     return (
-        <div className="flex flex-wrap flex justify-center">
+        <div className="flex flex-wrap justify-center">
             {teamDetails.map((member, index) => (
                 <TeamMember
                     key={index}
+                    isTeamLeader={member.isTeamLeader}
+                    isMentor={member.isMentor}
                     MemberPosition={member.MemberPosition}
                     name={member.name}
                     title={member.title}
