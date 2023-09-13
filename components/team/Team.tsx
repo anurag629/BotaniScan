@@ -8,7 +8,7 @@ const Team: React.FC = () => {
         {
             isTeamLeader: false,
             isMentor: false,
-            name: "Akansha Verma", 
+            name: "Akanksha Verma", 
             MemberPosition: "(Team Member)",
             title: "C++ and Web Developer",
             imageSrc: "/assets/profile/akanksha.png",
