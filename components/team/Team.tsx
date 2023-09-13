@@ -4,7 +4,8 @@ import TeamMember from './TeamMember';
 const Team: React.FC = () => {
     const teamDetails = [
         {
-            name: "Akansha",
+            name: "Akansha", 
+            MemberPosition: "(Team Member)",
             title: "C++ and Web Developer",
             imageSrc: "/assets/profile/woman.png",
             linkedinUrl: "https://www.linkedin.com/in/tranter-jaskulski",
@@ -16,6 +17,7 @@ const Team: React.FC = () => {
         },
         {
             name: "Rukshali",
+            MemberPosition: "(Team Member)",
             title: "Python Programmer",
             imageSrc: "/assets/profile/woman.png",
             linkedinUrl: "https://www.linkedin.com/in/tranter-jaskulski",
@@ -27,6 +29,7 @@ const Team: React.FC = () => {
         },
         {
             name: "Bhavy Airi",
+            MemberPosition: "(Team Member)",
             title: "Web Developer",
             imageSrc: "/assets/profile/bhavy.png",
             linkedinUrl: "https://www.linkedin.com/in/bhavy-airi-a24090207/",
@@ -38,6 +41,7 @@ const Team: React.FC = () => {
         },
         {
             name: "Abhishek Gupta",
+            MemberPosition: "(Team Member)",
             title: "Python & Web Developer",
             imageSrc: "/assets/profile/abhishek-gupta.png",
             linkedinUrl: "https://www.linkedin.com/in/abhishek-gupta-g/",
@@ -48,7 +52,20 @@ const Team: React.FC = () => {
             description: "Have a strong background in python and c++. I am passionate about finding bugs in code and transforming ideas into reality. Have experience in cybersecurity and Machine learning",
         },
         {
+            name: "Subrat",
+            MemberPosition: "(Team Member)",
+            title: "Programmer & Web Developer",
+            imageSrc: "/assets/profile/subrat.jpeg",
+            linkedinUrl: "https://www.linkedin.com/in/subratyadav/",
+            twitterUrl: "https://twitter.com/findingsubrat?t=hUHGhRBlKT2ZKJfcmPXaGQ&s=09",
+            githubUrl: "https://github.com/Subrat29",
+            instagramUrl: "https://www.instagram.com/findingsubrat/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
+            email: "subratyadav29@gmail.com",
+            description: "I have a strong background in C++ and Java and am currently learning web development.",
+        },
+        {
             name: "Anurag Verma",
+            MemberPosition: "(Team Leader)",
             title: "AI/ML & Web Developer",
             imageSrc: "/assets/profile/anurag-verma.png",
             linkedinUrl: "https://www.linkedin.com/in/anurag629",
@@ -61,10 +78,11 @@ const Team: React.FC = () => {
     ];
 
     return (
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap flex justify-center">
             {teamDetails.map((member, index) => (
                 <TeamMember
                     key={index}
+                    MemberPosition={member.MemberPosition}
                     name={member.name}
                     title={member.title}
                     imageSrc={member.imageSrc}

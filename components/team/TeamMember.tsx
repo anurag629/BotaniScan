@@ -11,6 +11,7 @@ import { Tooltip, Typography } from "@material-tailwind/react";
 
 interface TeamMemberProps {
     name: string;
+    MemberPosition: string;
     title: string;
     linkedinUrl: string;
     twitterUrl: string;
@@ -23,6 +24,7 @@ interface TeamMemberProps {
 
 const TeamMember: React.FC<TeamMemberProps> = ({
     name,
+    MemberPosition,
     title,
     linkedinUrl,
     twitterUrl,
@@ -50,6 +52,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
                     <div className="text-center mt-6">
                         <h1 className="text-white-900 text-xl font-bold mb-1">{name}</h1>
                         <div className="text-red-500 font-light mb-2">{title}</div>
+                        <div className="text-red-500 font-light mb-2">{MemberPosition}</div>      
                     </div>
             
                 <div className="flex items-center justify-center">
