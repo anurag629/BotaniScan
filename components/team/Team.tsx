@@ -66,7 +66,7 @@ const Team: React.FC = () => {
     ];
 
     return (
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap flex justify-center">
             {teamDetails.map((member, index) => (
                 <TeamMember
                     key={index}
