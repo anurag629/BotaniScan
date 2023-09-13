@@ -8,10 +8,10 @@ const MainContent: React.FC = () => {
         <div className="flex flex-wrap justify-center text-center mb-24 mt-24">
         <div className="w-full lg:w-6/12 px-4">
           <h1 className="text-white-900 text-4xl font-bold mb-8">
-            Our team <b className='text-green-700 '>Flora Finder</b>
+            Our team <b className='text-green-700 '>Coder Cops</b>
           </h1>
           <p className="text-red-500 text-lg font-light">
-            With over 100 years of combined experience, we&apos;ve got a well-seasoned team at the helm.
+            With some combined experience, we&apos;ve got a well-seasoned team at the helm.
           </p>
         </div>
       </div>
