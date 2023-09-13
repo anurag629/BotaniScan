@@ -20,5 +20,3 @@ yarn dev
 # or
 pnpm dev
 ```
-
-##### Before pushing changes do `yarn build` and if you faced any errors them fix them and then push the changes
