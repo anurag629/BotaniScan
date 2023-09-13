@@ -2,6 +2,19 @@ import React from 'react';
 import TeamMember from './TeamMember';
 
 const Team: React.FC = () => {
+    const mentorDetails = [
+        {
+            name: "Ravi",
+            MemberPosition: "(Mentor)",
+            title: "Python & Web Developer",
+            imageSrc: "/assets/profile/woman.png",
+            linkedinUrl: "https://www.linkedin.com/in/ravi-kumar-37463/",
+            twitterUrl: "https://twitter.com/anurag_629",
+            githubUrl: "https://github.com/anurag629",
+            instagramUrl: "https://www.instagram.com/anurag_629/",
+        },
+    ];
+
     const teamDetails = [
         {
             isTeamLeader: false,
@@ -86,21 +99,7 @@ const Team: React.FC = () => {
             instagramUrl: "https://www.instagram.com/anurag_629/",
             email: "akvermaav629@gmail.com",
             description: "Have a strong background in math, statistics, and programming. I am passionate about translating complex data into actionable insights. Have experience in building machine learning & deep learning models. I quick learner and enjoy working in a fast-paced work environment.",
-        },
-        {
-            isTeamLeader: false,
-            isMentor: true,
-            name: "Ravi",
-            MemberPosition: "(Mentor)",
-            title: "Python & Web Developer",
-            imageSrc: "/assets/profile/woman.png",
-            linkedinUrl: "https://www.linkedin.com/in/ravi-kumar-37463/",
-            twitterUrl: "https://twitter.com/anurag_629",
-            githubUrl: "https://github.com/anurag629",
-            instagramUrl: "https://www.instagram.com/anurag_629/",
-            email: "akvermaav629@gmail.com",
-            description: "Have a strong background in math, statistics, and programming. I am passionate about translating complex data into actionable insights. Have experience in building machine learning & deep learning models. I quick learner and enjoy working in a fast-paced work environment.",
-        },
+        }
     ];
 
     return (
