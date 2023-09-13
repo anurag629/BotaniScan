@@ -8,10 +8,6 @@ import Image from 'next/image';
 export interface TeamMentorProps {
   name: string;
   title: string;
-  linkedinUrl: string;
-  twitterUrl: string;
-  githubUrl: string;
-  instagramUrl: string;
   imageSrc: string;
 }
 
