@@ -52,6 +52,18 @@ const Team: React.FC = () => {
             description: "Have a strong background in python and c++. I am passionate about finding bugs in code and transforming ideas into reality. Have experience in cybersecurity and Machine learning",
         },
         {
+            name: "Subrat",
+            MemberPosition: "(Team Member)",
+            title: "Programmer & Web Developer",
+            imageSrc: "/assets/profile/subrat.jpeg",
+            linkedinUrl: "https://www.linkedin.com/in/subratyadav/",
+            twitterUrl: "https://twitter.com/findingsubrat?t=hUHGhRBlKT2ZKJfcmPXaGQ&s=09",
+            githubUrl: "https://github.com/Subrat29",
+            instagramUrl: "https://www.instagram.com/findingsubrat/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
+            email: "subratyadav29@gmail.com",
+            description: "I have a strong background in C++ and Java and am currently learning web development.",
+        },
+        {
             name: "Anurag Verma",
             MemberPosition: "(Team Leader)",
             title: "AI/ML & Web Developer",
