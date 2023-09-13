@@ -42,7 +42,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
         isTeamLeader ? 'order-first' : ''
       }`}
     >
-      <div className="flex flex-col">
+      <div className="flex flex-col items-center justify-center">
         <div>
           <Image
             className="rounded-2xl drop-shadow-md"
