@@ -12,7 +12,7 @@ const MainContent: React.FC = () => {
             Our team <b className='text-green-700 '>Flora Finder</b>
           </h1>
           <p className="text-red-500 text-lg font-light">
-            With over 100 years of combined experience, we&apos;ve got a well-seasoned team at the helm.
+            With over 50+ years of combined experience, we&apos;ve got a well-seasoned team at the helm.
           </p>
         </div>
       </div>
