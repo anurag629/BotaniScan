@@ -5,10 +5,7 @@ const Team: React.FC = () => {
     const teamDetails = [
         {
             name: "Akansha", 
-
-            // add position by subrat
             MemberPosition: "(Team Member)",
-
             title: "C++ and Web Developer",
             imageSrc: "/assets/profile/woman.png",
             linkedinUrl: "https://www.linkedin.com/in/tranter-jaskulski",
@@ -20,10 +17,7 @@ const Team: React.FC = () => {
         },
         {
             name: "Rukshali",
-
-            // add position by subrat
             MemberPosition: "(Team Member)",
-
             title: "Python Programmer",
             imageSrc: "/assets/profile/woman.png",
             linkedinUrl: "https://www.linkedin.com/in/tranter-jaskulski",
@@ -35,10 +29,7 @@ const Team: React.FC = () => {
         },
         {
             name: "Bhavy Airi",
-
-            // add position by subrat
             MemberPosition: "(Team Member)",
-
             title: "Web Developer",
             imageSrc: "/assets/profile/bhavy.png",
             linkedinUrl: "https://www.linkedin.com/in/bhavy-airi-a24090207/",
@@ -50,10 +41,7 @@ const Team: React.FC = () => {
         },
         {
             name: "Abhishek Gupta",
-
-            // add position by subrat
             MemberPosition: "(Team Member)",
-
             title: "Python & Web Developer",
             imageSrc: "/assets/profile/abhishek-gupta.png",
             linkedinUrl: "https://www.linkedin.com/in/abhishek-gupta-g/",
@@ -65,10 +53,7 @@ const Team: React.FC = () => {
         },
         {
             name: "Anurag Verma",
-
-            // add position by subrat
             MemberPosition: "(Team Leader)",
-
             title: "AI/ML & Web Developer",
             imageSrc: "/assets/profile/anurag-verma.png",
             linkedinUrl: "https://www.linkedin.com/in/anurag629",
@@ -85,9 +70,7 @@ const Team: React.FC = () => {
             {teamDetails.map((member, index) => (
                 <TeamMember
                     key={index}
-
-                    MemberPosition={member.MemberPosition}  //add
-                    
+                    MemberPosition={member.MemberPosition}
                     name={member.name}
                     title={member.title}
                     imageSrc={member.imageSrc}
