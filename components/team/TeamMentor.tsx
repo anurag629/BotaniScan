@@ -20,7 +20,7 @@ const TeamMember: React.FC<TeamMentorProps> = ({
     <div
       className="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4 hover:scale-110 transition-transform duration-300"
     >
-      <div className="flex flex-col">
+      <div className="flex flex-col items-center justify-center">
         <div>
           <Image
             className="rounded-2xl drop-shadow-md"
