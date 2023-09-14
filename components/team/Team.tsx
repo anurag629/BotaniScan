@@ -65,7 +65,6 @@ const Team: React.FC = () => {
             title: "Programmer & Web Developer",
             imageSrc: "/assets/profile/subrat.png",
             linkedinUrl: "https://www.linkedin.com/in/subratyadav/",
-            //twitterUrl: "https://twitter.com/findingsubrat?t=hUHGhRBlKT2ZKJfcmPXaGQ&s=09",
             githubUrl: "https://github.com/Subrat29",
             instagramUrl: "https://www.instagram.com/findingsubrat/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
             email: "subratyadav29@gmail.com",
