@@ -14,7 +14,7 @@ export interface TeamMemberProps {
   MemberPosition: string;
   title: string;
   linkedinUrl: string;
-  twitterUrl: string;
+  
   githubUrl: string;
   instagramUrl: string;
   imageSrc: string;
@@ -29,7 +29,6 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   MemberPosition,
   title,
   linkedinUrl,
-  twitterUrl,
   githubUrl,
   instagramUrl,
   imageSrc,
@@ -61,9 +60,6 @@ const TeamMember: React.FC<TeamMemberProps> = ({
         <div className="flex items-center justify-center">
           <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex rounded-full h-7 w-7 hover:scale-150 transition-transform duration-300">
             <FontAwesomeIcon icon={faLinkedin} className="text-blue-500 mx-auto mt-2" />
-          </a>
-          <a href={twitterUrl} target="_blank" rel="noopener noreferrer" className="flex rounded-full h-7 w-7 hover:scale-150 transition-transform duration-300">
-            <FontAwesomeIcon icon={faTwitter} className="text-blue-400 mx-auto mt-2" />
           </a>
           <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="flex rounded-full h-7 w-7 hover:scale-150 transition-transform duration-300">
             <FontAwesomeIcon icon={faGithub} className="text-gray-600 mx-auto mt-2" />

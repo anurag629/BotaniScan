@@ -6,6 +6,7 @@ const Mentor: React.FC = () => {
         {
             name: "Prashant Maharishi", 
             title: "Assistant Professor",
+            department: "CSE Department",
             imageSrc: "/assets/profile/prashant-maharishi.png",
         },
     ];
@@ -17,6 +18,7 @@ const Mentor: React.FC = () => {
                     key={index}
                     name={mentor.name}
                     title={mentor.title}
+                    department={mentor.department}
                     imageSrc={mentor.imageSrc}
                 />
             ))}
