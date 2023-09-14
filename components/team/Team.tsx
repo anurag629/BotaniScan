@@ -28,7 +28,7 @@ const Team: React.FC = () => {
             linkedinUrl: "https://www.linkedin.com/in/rukshali-rukshali-450516218",
             githubUrl: "https://github.com/Rukshali",
             instagramUrl: "https://www.instagram.com/tranterjaskulski/",
-            email: "rukshalirukshali001@gmail.com ",
+            email: "rukshalirukshali001@gmail.com",
             description: "Have strong background in python. Experienced Software Development",
         },
         {
@@ -41,7 +41,7 @@ const Team: React.FC = () => {
             linkedinUrl: "https://www.linkedin.com/in/bhavy-airi-a24090207/",
             githubUrl: "https://github.com/tech-bash",
             instagramUrl: "https://www.instagram.com/denicejagna/",
-            email: "aa@gmail.com",
+            email: "airiraghav@gmail.com",
             description: "With over 100 years of combined experience, we've got a well-seasoned team at the helm.",
         },
         {
