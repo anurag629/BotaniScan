@@ -10,7 +10,7 @@ const MainProject: React.FC = () => {
                         Upload the Plant <b className='text-green-700 '>Leaf</b>
                     </h1>
                     <p className="text-red-500 text-lg font-light">
-                        Botani Scan is a web application that can identify the plant leaf disease using image processing and deep learning.
+                    Upload an image of a plant leaf, and our advanced image recognition technology, powered by machine learning, will identify the plant species for you
                     </p>
                 </div>
             </div>
