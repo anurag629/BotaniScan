@@ -21,7 +21,6 @@ const MainProject: React.FC = () => {
         <div className="p-4 sm:ml-64">
           Detail
         </div>
-        <Footer />
       </div>
   );
 }
