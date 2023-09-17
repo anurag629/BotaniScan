@@ -19,14 +19,16 @@ export default function RootLayout({
     <html lang="en">
       
       <body>
-        <div>
+        {/* <div>
           <Header />
-        </div>
+        </div> */}
         <div className={inter.className}>
         {children}
+       
+
         </div>
         <div>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </body>
     </html>
