@@ -6,40 +6,44 @@ import Link from "next/link";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
+  const [collapsed, setSidebarCollapsed] = useState(false);
   const menu = [
     { name: "Home", url: "/" },
     { name: "Our Team", url: "/ourteam" },
     { name: "About Project", url: "/aboutproject" },
   ];
+  const closesidebar = () => {
+    setSidebarCollapsed(false);
+  };
 
   const closeNavbar = () => {
     setNavbar(false);
-  };
+  }; 
 
   return (
     // <nav className={`w-full bg-black-600 shadow-[0_-1px_0px_2px_rgba(249,7,7,1)] ${navbar ? 'h-screen' : 'h-[70px]'}`}>
     //   <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
     //     <div>
     //       <div className="flex items-center justify-between py-3 md:py-5 md:block">
-    //         <a href="/" className="">
-    //           <div className="avatar">
-    //             <div className="w-10 rounded">
-    //               <h1 className="text-3xl text-white font-bold">BS</h1>
-    //             </div>
-    //           </div>
-    //         </a>
-    //         <div className="md:hidden">
-    //           <button
-    //             className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
-    //             onClick={() => setNavbar(!navbar)}
-    //           >
-    //             {navbar ? (
-    //               <RxCross1 className="text-white" />
-    //             ) : (
-    //               <AiOutlineMenu className="text-white" />
-    //             )}
-    //           </button>
-    //         </div>
+            // <a href="/" className="">
+            //   <div className="avatar">
+            //     <div className="w-10 rounded">
+            //       <h1 className="text-3xl text-white font-bold">BS</h1>
+            //     </div>
+            //   </div>
+            // </a>
+            // <div className="md:hidden">
+            //   <button
+            //     className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+            //     onClick={() => setNavbar(!navbar)}
+            //   >
+            //     {navbar ? (
+            //       <RxCross1 className="text-white" />
+            //     ) : (
+            //       <AiOutlineMenu className="text-white" />
+            //     )}
+            //   </button>
+            // </div>
     //       </div>
     //     </div>
     //     <div>
@@ -69,11 +73,12 @@ const Navbar = () => {
       <nav className="fixed top-0 left-0 z-50 w-full bg-black border-b border-gray-200 dark:bg-black-800 dark:border-gray-700">
         <div className="px-0 py-3 lg:px-5 lg:pl-3">
           <div className="flex items-center justify-between">
-            <div className="flex items-center justify-start">
+            <div className="flex items-center justify-start" >
               <button
-                data-drawer-target="logo-sidebar"
-                data-drawer-toggle="logo-sidebar"
-                aria-controls="logo-sidebar"
+                onClick={() => setSidebarCollapsed(!collapsed)}
+                // data-drawer-target="logo-sidebar"
+                // data-drawer-toggle="logo-sidebar"
+                // aria-controls="logo-sidebar"
                 type="button"
                 className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               >
