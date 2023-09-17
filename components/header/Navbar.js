@@ -5,21 +5,18 @@ import { RxCross1 } from "react-icons/rx";
 import Link from "next/link";
 
 const Navbar = () => {
-  const [navbar, setNavbar] = useState(false);
-  const [collapsed, setSidebarCollapsed] = useState(false);
+  const [isTransformed, setIstransformed] = useState(true);
+ //Function to toggle the transformation
+ const toggleTransformation = () => {
+  setIstransformed(!isTransformed);
+ }
+
   const menu = [
     { name: "Home", url: "/" },
     { name: "Our Team", url: "/ourteam" },
     { name: "About Project", url: "/aboutproject" },
   ];
-  const closesidebar = () => {
-    setSidebarCollapsed(false);
-  };
-
-  const closeNavbar = () => {
-    setNavbar(false);
-  }; 
-
+  
   return (
     // <nav className={`w-full bg-black-600 shadow-[0_-1px_0px_2px_rgba(249,7,7,1)] ${navbar ? 'h-screen' : 'h-[70px]'}`}>
     //   <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
@@ -70,15 +67,13 @@ const Navbar = () => {
     // </nav>
 
     <div>
+      
       <nav className="fixed top-0 left-0 z-50 w-full bg-black border-b border-gray-200 dark:bg-black-800 dark:border-gray-700">
         <div className="px-0 py-3 lg:px-5 lg:pl-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center justify-start" >
               <button
-                onClick={() => setSidebarCollapsed(!collapsed)}
-                // data-drawer-target="logo-sidebar"
-                // data-drawer-toggle="logo-sidebar"
-                // aria-controls="logo-sidebar"
+                onClick={toggleTransformation}
                 type="button"
                 className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               >
@@ -114,12 +109,11 @@ const Navbar = () => {
                   <button
                     type="button"
                     className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
-                    aria-expanded="false"
-                    data-dropdown-toggle="dropdown-user"
+                    
                   >
                     <span className="sr-only">Open user menu</span>
                     <img
-                      className="w-8 h-8 rounded-full"
+                    className="w-8 h-8 rounded-full"
                       src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
                       alt="user photo"
                     />
@@ -190,7 +184,7 @@ const Navbar = () => {
 
       <aside
         id="logo-sidebar"
-        className="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-black border-r border-gray-200 sm:translate-x-0 dark:bg-black dark:border-gray-700"
+        className={`fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform ${ isTransformed ? '-translate-x-full' : 'transform-none'} bg-black border-r border-gray-200 sm:translate-x-0 dark:bg-black dark:border-gray-700`}
         aria-label="Sidebar"
       >
         <div className="h-full px-3 pb-4 overflow-y-auto bg-black dark:bg-black">
