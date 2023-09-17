@@ -10,7 +10,7 @@ const FileUpload: React.FC = () => {
         const fileInput = event.target;
         if (fileInput && fileInput.files && fileInput.files[0]) {
             const file = fileInput.files[0];
-            if (file.type === 'image/svg+xml' || file.type === 'image/png' || file.type === 'image/jpeg' || file.type === 'image/gif') {
+            if (file.type === 'image/png' || file.type === 'image/jpeg') {
                 setSelectedFile(file);
                 setUploadStatus('File selected and valid.');
             } else {
@@ -35,7 +35,7 @@ const FileUpload: React.FC = () => {
             >
                 <div className="flex flex-col items-center justify-center pt-5 pb-6">
                     <svg
-                        className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
+                        className="w-6 h-6 mb-4 text-gray-500 dark:text-gray-400"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -52,7 +52,7 @@ const FileUpload: React.FC = () => {
                     <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
                         <span className="font-semibold">Click to upload</span> or drag and drop
                     </p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">PNG, JPG</p>
                 </div>
                 <input
                     id="dropzone-file"
