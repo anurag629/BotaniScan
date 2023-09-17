@@ -2,8 +2,7 @@ import React from "react";
 
 const Footer: React.FC = () => {
     return (
-
-        <footer className="bg-white shadow dark:bg-black">
+        <footer className="shadow dark:bg-black p-4 sm:ml-64">
             <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <a href="/" className="flex items-center mb-4 sm:mb-0">
