@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from "react";
 import FileUpload from "@/components/mainProject/FileUpload";
 import LinkInput from "@/components/mainProject/LinkInput";
-import fetch from 'isomorphic-unfetch';
-
-
-
-
 
 const MainProject: React.FC = () => {  
 

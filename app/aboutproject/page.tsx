@@ -8,7 +8,7 @@ export default function Home() {
                 <div className="flex flex-row">
                     <div className="container max-w-7xl px-4 sm:ml-64">
 
-                        <div className="flex flex-col justify-center mb-24 mt-24">
+                        <div className="flex text-center flex-col justify-center mb-24 mt-24">
                             <h1 className="text-white-900 text-4xl font-bold mb-8">
                                 Project <b className='text-green-700 '>&nbsp;Details</b>
                             </h1>
