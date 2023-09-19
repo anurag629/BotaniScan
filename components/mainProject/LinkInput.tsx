@@ -1,9 +1,28 @@
-'use client' // 👈 use it here
+'use client'
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
+interface PredictionResponse {
+    message: string;
+}
 
 const LinkInput: React.FC = () => {
+    const [imageUrl, setImageUrl] = useState<string>("");
+    const [predictionResult, setPredictionResult] = useState<PredictionResponse | null>(null);
+
+    const submitComment = async () => {
+        console.log(imageUrl);
+        try {
+            const response = await axios.post<PredictionResponse>(`https://anurag629-botaniscan.hf.space/prediction/?image_link=${imageUrl}`);
+            const data = response.data;
+            setPredictionResult(data);
+            console.log(data);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
     return (
         <div>
             <div className="p-4">
@@ -16,14 +35,24 @@ const LinkInput: React.FC = () => {
                                     <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z" />
                                 </svg>
                             </span>
-                            <input type="text" className="rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="https:" />
+                            <input
+                                type="text"
+                                className="rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                value={imageUrl}
+                                onChange={(e) => setImageUrl(e.target.value)}
+                            />
+                            <button onClick={submitComment}>Show Result</button> {}
                         </div>
                     </div>
                 </div>
             </div>
+            {predictionResult && (
+                <div>
+                    <p>Prediction Result: {predictionResult.message}</p>
+                </div>
+            )}
         </div>
     );
 }
-
 
 export default LinkInput;
