@@ -10,7 +10,7 @@ const Team: React.FC = () => {
             isMentor: false,
             name: "Akanksha Verma", 
             MemberPosition: "(Team Member)",
-            title: "C++ and Web Developer",
+            title: "C++ & Web Developer",
             imageSrc: "/assets/profile/akanksha.png",
             linkedinUrl: "https://www.linkedin.com/in/akankshaverma06/",
             githubUrl: "https://github.com/Akankshashub",
