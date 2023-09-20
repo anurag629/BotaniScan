@@ -62,7 +62,7 @@ const Team: React.FC = () => {
             isMentor: false,
             name: "Subrat",
             MemberPosition: "(Team Member)",
-            title: "Programmer & Web Developer",
+            title: "Web Developer",
             imageSrc: "/assets/profile/subrat.png",
             linkedinUrl: "https://www.linkedin.com/in/subratyadav/",
             githubUrl: "https://github.com/Subrat29",
