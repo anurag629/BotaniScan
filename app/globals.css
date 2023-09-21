@@ -25,3 +25,18 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.result-box {
+  background-color: #f0f0f0; /* Background color of the box */
+  border: 1px solid #ccc; /* Border style */
+  padding: 10px; /* Padding inside the box */
+  margin-top: 10px; /* Margin on top of the box */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+/* Style the text inside the result box */
+.result-box p {
+  font-size: 16px; /* Adjust the font size */
+  color: #333; /* Text color */
+}
