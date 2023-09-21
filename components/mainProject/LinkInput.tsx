@@ -16,11 +16,13 @@ const LinkInput: React.FC = () => {
         try {
             const response = await axios.post<PredictionResponse>(`https://anurag629-botaniscan.hf.space/prediction/?image_link=${imageUrl}`);
             const data = response.data;
-            setPredictionResult(data);
+            setPredictionResult(response.data);
+            console.log(predictionResult?.message);
             console.log(data);
         } catch (err) {
             console.log(err);
         }
+
     }
 
     return (
@@ -46,10 +48,10 @@ const LinkInput: React.FC = () => {
                     </div>
                 </div>
             </div>
-            {predictionResult && (
-                <div>
-                    <p>Prediction Result: {predictionResult.message}</p>
-                </div>
+            {predictionResult &&(
+                  <div className="result-box bg-gray-200 border border-gray-400 p-4 rounded-md mt-4 shadow-md">
+                  <p className="text-gray-800">{predictionResult.message}</p>
+              </div>
             )}
         </div>
     );
