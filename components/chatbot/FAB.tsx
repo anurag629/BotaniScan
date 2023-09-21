@@ -57,10 +57,10 @@ const FAB: React.FC = () => {
                 <p className="text-xs text-white-900 bg-green-500 rounded-lg p-2">Hello, How can I help you?</p>
               </div>
             </div>
-            <div className="flex flex-row items-center justify-between p-2 bg-gray-100 rounded-lg mt-2">
-              <input type="text" className="flex-1 bg-transparent outline-none" placeholder="Type message..." />
+            <div className="flex flex-row items-center justify-between text-gray-800 p-2 bg-gray-100 rounded-lg mt-2">
+              <input type="text" className="flex-1 bg-transparent outline-black" placeholder="Type message..." />
               <button>
-                <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-25 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                 </svg>
               </button>
