@@ -2,10 +2,17 @@
 
 import React, { useState } from "react";
 import axios from "axios";
+import ReactMarkdown from 'react-markdown';
 
-interface PredictionResponse {
-    message: string;
-}
+type PredictionItem = {
+    score: number;
+    label: string;
+};
+
+type PredictionResponse = {
+    prediction: PredictionItem[];
+    detail: string;
+};
 
 const LinkInput: React.FC = () => {
     const [imageUrl, setImageUrl] = useState<string>("");
@@ -15,10 +22,9 @@ const LinkInput: React.FC = () => {
         console.log(imageUrl);
         try {
             const response = await axios.post<PredictionResponse>(`https://anurag629-botaniscan.hf.space/prediction/?image_link=${imageUrl}`);
-            const data = response.data;
+
             setPredictionResult(response.data);
-            console.log(predictionResult?.message);
-            console.log(data);
+            console.log(predictionResult);
         } catch (err) {
             console.log(err);
         }
@@ -43,15 +49,30 @@ const LinkInput: React.FC = () => {
                                 value={imageUrl}
                                 onChange={(e) => setImageUrl(e.target.value)}
                             />
-                            <button onClick={submitComment}>Show Result</button> {}
+
+
                         </div>
+                        <button type="button"
+                            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 mt-4"
+                            onClick={submitComment}
+                        >Show Result</button>
                     </div>
                 </div>
             </div>
-            {predictionResult &&(
-                  <div className="result-box bg-gray-200 border border-gray-400 p-4 rounded-md mt-4 shadow-md">
-                  <p className="text-gray-800">{predictionResult.message}</p>
-              </div>
+            {predictionResult ? (
+                <div>
+                    <h2>Prediction</h2>
+                    <ul>
+                        {predictionResult.prediction.map((item, index) => (
+                            <li key={index}>{item.label}: {item.score}</li>
+                        ))}
+                    </ul>
+                    <h2>Detail:</h2>
+                    <ReactMarkdown>{predictionResult.detail}</ReactMarkdown>
+
+                </div>
+            ) : (
+                <p>Loading...</p>
             )}
         </div>
     );
