@@ -63,7 +63,7 @@ const LinkInput: React.FC = () => {
                 <div>
                     <h2>Prediction</h2>
                     <ul>
-                        {predictionResult.prediction?.map((item, index) => (
+                        {predictionResult.prediction && predictionResult.prediction.map((item, index) => (
                             <li key={index}>{item.label}: {item.score}</li>
                         ))}
                     </ul>
