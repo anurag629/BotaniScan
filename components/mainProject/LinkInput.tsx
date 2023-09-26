@@ -17,9 +17,11 @@ type PredictionResponse = {
 const LinkInput: React.FC = () => {
     const [imageUrl, setImageUrl] = useState<string>("");
     const [predictionResult, setPredictionResult] = useState<PredictionResponse | null>(null);
+    const [loading, setLoading] = useState(false);
 
     const submitComment = async () => {
         console.log(imageUrl);
+        setLoading(true);
         try {
             const response = await axios.post<PredictionResponse>(`https://anurag629-botaniscan.hf.space/prediction/?image_link=${imageUrl}`);
 
@@ -27,8 +29,11 @@ const LinkInput: React.FC = () => {
             console.log(predictionResult);
         } catch (err) {
             console.log(err);
+            setPredictionResult(null);
         }
-
+        finally {
+            setLoading(false);
+          }
     }
 
     return (
@@ -53,27 +58,26 @@ const LinkInput: React.FC = () => {
 
                         </div>
                         <button type="button"
+                            disabled = {loading}
                             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 mt-4"
                             onClick={submitComment}
-                        >Show Result</button>
+                        >{loading ? "Loading..." : "Show Result"}</button>
                     </div>
                 </div>
             </div>
-            {predictionResult ? (
+            {predictionResult && predictionResult.prediction ? (
                 <div>
-                    <h2>Prediction</h2>
+                    <h2 className="text-2xl ... text-lime-500">Prediction Results:</h2>
                     <ul>
                         {predictionResult.prediction?.map((item, index) => (
                             <li key={index}>{item.label}: {item.score}</li>
                         ))}
                     </ul>
-                    <h2>Detail:</h2>
+                    <h2 className="text-2xl ... text-lime-400">More Details:</h2>
                     <ReactMarkdown>{predictionResult.detail}</ReactMarkdown>
 
                 </div>
-            ) : (
-                <p>Loading...</p>
-            )}
+            ) : (predictionResult !== null && <p className="text-2xl ... text-lime-500">No data found</p>)}
         </div>
     );
 }
