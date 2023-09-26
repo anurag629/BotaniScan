@@ -10,7 +10,7 @@ type PredictionItem = {
 };
 
 type PredictionResponse = {
-    prediction: PredictionItem[];
+    prediction: PredictionItem[] | null;
     detail: string;
 };
 
