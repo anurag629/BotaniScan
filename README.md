@@ -20,3 +20,6 @@ yarn dev
 # or
 pnpm dev
 ```
+
+# Backend: [API](https://github.com/anurag629/BotaniScan-API)
+# Models: [Models](https://github.com/anurag629/BotaniScan-ALL)
